@@ -14,18 +14,18 @@ public class Passport {
 
     //TYPICAL MAPPING
    /* @JoinColumn(name = "person_id")
-    private Person person;*/
+    private Person person; */
 
     //@MAPSID pour le gain de performance
     // La façon la plus efficace de mapper
     // Avec le @OneToOne @MapsId directement au niveau de l'entité enfant
     // à partir duquel JPA reconnaîtra le parent grâce au MapsId qui prend en compte l'annotation
     // @Id@GeneratedValue pour identifier l'entité, en somme il match les deux ids
+
     @MapsId
     private Person person;
 
-    // Getters and setters
-
+    // Getters and setter
 
     public Long getId() {
         return id;

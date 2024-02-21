@@ -1,22 +1,5 @@
 package fr.oli.pres.demo.poller;
-
-import fr.oli.pres.demo.entity.Author;
-import net.ttddyy.dsproxy.listener.ChainListener;
-import net.ttddyy.dsproxy.listener.DataSourceQueryCountListener;
-import net.ttddyy.dsproxy.listener.logging.SLF4JQueryLoggingListener;
-import net.ttddyy.dsproxy.support.ProxyDataSourceBuilder;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.integration.channel.DirectChannel;
-import org.springframework.integration.dsl.IntegrationFlow;
-import org.springframework.integration.dsl.Pollers;
-import org.springframework.integration.jdbc.JdbcPollingChannelAdapter;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
-import org.springframework.messaging.MessageChannel;
-
-import javax.sql.DataSource;
-
 @Configuration
 public class JdbcIntegrationConfig {
 
