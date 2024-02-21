@@ -16,15 +16,7 @@ public class Person {
    @OneToOne(mappedBy = "person", cascade = CascadeType.ALL,
             fetch = FetchType.LAZY, optional = false)
     private Passport passport;
-
-//    public Person(Long id, String name, Passport passport) {
-//        this.id = id;
-//        this.name = name;
-//        this.passport = passport;
-//    }
-
     public Person(){
-
     }
     public Long getId() {
         return id;
