@@ -10,18 +10,10 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-
-    //Premier cas Typical mapping: Comment cette relation est mappé le plus souvent
    @JsonIgnore
    @OneToOne(mappedBy = "person", cascade = CascadeType.ALL,
             fetch = FetchType.LAZY, optional = false)
     private Passport passport;
-
-//    public Person(Long id, String name, Passport passport) {
-//        this.id = id;
-//        this.name = name;
-//        this.passport = passport;
-//    }
 
     public Person(){
 

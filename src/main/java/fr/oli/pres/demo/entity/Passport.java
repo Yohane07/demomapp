@@ -7,21 +7,8 @@ public class Passport {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String number;
-
-    //Premier cas Typical mapping: Comment cette relation
-    // est mappé le plus souvent
     @OneToOne(fetch = FetchType.LAZY)
-
-    //TYPICAL MAPPING
-   /* @JoinColumn(name = "person_id")
-    private Person person; */
-
-    //@MAPSID pour le gain de performance
-    // La façon la plus efficace de mapper
-    // Avec le @OneToOne @MapsId directement au niveau de l'entité enfant
-    // à partir duquel JPA reconnaîtra le parent grâce au MapsId qui prend en compte l'annotation
-    // @Id@GeneratedValue pour identifier l'entité, en somme il match les deux ids
-
+    //MapsId
     @MapsId
     private Person person;
 
